@@ -24,14 +24,9 @@ extras-up:
 extras-down:
 	python destroy-extra-pods.py
 
-fiber-up:
-	orderer-up peer-up
+fiber-up: orderer-up peer-up
 
-fiber-down:
-	peer-down orderer-down
-
-fetch:
-	python fetchPDF.py
+fiber-down: peer-down orderer-down
 
 # bring up the cluster
 up: orderer-up peer-up nfs-up extras-up
